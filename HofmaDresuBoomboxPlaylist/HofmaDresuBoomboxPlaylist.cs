@@ -1,6 +1,7 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using System;
 
 namespace HofmaDresuBoomboxPlaylist
 {
@@ -28,20 +29,29 @@ namespace HofmaDresuBoomboxPlaylist
         {
             Harmony ??= new Harmony(MyPluginInfo.PLUGIN_GUID);
 
-            Logger.LogDebug("Patching...");
+            Logger.LogInfo("Patching...");
 
             Harmony.PatchAll();
 
-            Logger.LogDebug("Finished patching!");
+            Logger.LogInfo("Finished patching!");
         }
 
         internal static void Unpatch()
         {
-            Logger.LogDebug("Unpatching...");
+            Logger.LogInfo("Unpatching...");
 
             Harmony?.UnpatchSelf();
 
-            Logger.LogDebug("Finished unpatching!");
+            Logger.LogInfo("Finished unpatching!");
         }
+
+        #region logging
+        internal static void LogDebug(string message) => Instance.Log(message, LogLevel.Debug);
+        internal static void LogInfo(string message) => Instance.Log(message, LogLevel.Info);
+        internal static void LogWarning(string message) => Instance.Log(message, LogLevel.Warning);
+        internal static void LogError(string message) => Instance.Log(message, LogLevel.Error);
+        internal static void LogError(Exception ex) => Instance.Log($"{ex.Message}\n{ex.StackTrace}", LogLevel.Error);
+        private void Log(string message, LogLevel logLevel) => Logger.Log(logLevel, message);
+        #endregion
     }
 }

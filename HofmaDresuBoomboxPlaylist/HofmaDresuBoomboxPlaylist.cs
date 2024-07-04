@@ -15,6 +15,7 @@ namespace HofmaDresuBoomboxPlaylist
         internal new static ManualLogSource Logger { get; private set; } = null!;
         internal static Harmony? Harmony { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Used outside of my code by BepInEx (I think)")]
         private void Awake()
         {
             Logger = base.Logger;

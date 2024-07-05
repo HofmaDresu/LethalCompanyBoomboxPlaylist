@@ -17,7 +17,7 @@ namespace HofmaDresuBoomboxPlaylist.Managers
         public static event Action? OnAllSongsLoaded;
         public static bool FinishedLoading => finishedLoading;
 
-        static List<AudioClip> clips = new List<AudioClip>();
+        static readonly List<AudioClip> clips = [];
         static bool firstRun = true;
         static bool finishedLoading = false;
 
@@ -115,7 +115,7 @@ namespace HofmaDresuBoomboxPlaylist.Managers
             HofmaDresuBoomboxPlaylist.LogInfo($"Applying clips!");
 
             if (clips.Any())
-                __instance.musicAudios = clips.ToArray();
+                __instance.musicAudios = [.. clips];
 
             HofmaDresuBoomboxPlaylist.LogInfo($"Total Clip Count: {__instance.musicAudios.Length}");
         }

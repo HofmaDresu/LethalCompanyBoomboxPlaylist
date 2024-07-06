@@ -21,7 +21,12 @@ namespace HofmaDresuBoomboxPlaylist.Managers
         static bool firstRun = true;
         static bool finishedLoading = false;
 
+        // r2modman seems to install all files in hofmadresu-HofmaDresuBoomboxPlaylist instead of in my structure. This needs to be investigated, but hopefully this works for now.
+#if DEBUG
         static readonly string directory = Path.Combine(Paths.BepInExRootPath, "plugins", "HofmaDresuBoomboxPlaylistSongs");
+#else
+        static readonly string directory = Path.Combine(Paths.BepInExRootPath, "plugins", "hofmadresu-HofmaDresuBoomboxPlaylist");
+#endif
 
         public static void Load()
         {

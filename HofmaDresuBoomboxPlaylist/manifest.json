@@ -2,7 +2,7 @@
   "name": "HofmaDresuBoomboxPlaylist",
   "version_number": "1.0.0",
   "website_url": "https://github.com/HofmaDresu/LethalCompanyBoomboxPlaylist",
-  "description": "This is a description for a mod. 250 characters max",
+  "description": "A quick mod that plays custom songs from the Lethal Company boombox",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2100"
   ]

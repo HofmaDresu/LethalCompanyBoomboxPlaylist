@@ -15,6 +15,7 @@ namespace HofmaDresuBoomboxPlaylist.Patches
                 HofmaDresuBoomboxPlaylist.LogInfo($"volume set to {targetVolume}");
             }
 
+            __instance.itemProperties.requiresBattery = false;
 
             if (AudioManager.FinishedLoading)
                 AudioManager.ApplyClips(__instance);

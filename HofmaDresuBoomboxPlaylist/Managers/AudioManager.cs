@@ -60,6 +60,12 @@ namespace HofmaDresuBoomboxPlaylist.Managers
         {
             HofmaDresuBoomboxPlaylist.LogInfo($"Loading {filePath}!");
 
+            // Completely skip non-mp3 without logging
+            if (!filePath.EndsWith(".mp3"))
+            {
+                yield break;
+            }
+
             if (!allowedSongs.Any(filePath.EndsWith))
             {
                 HofmaDresuBoomboxPlaylist.LogError($"The song {filePath} is not a part of this package, skipping!");

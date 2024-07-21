@@ -60,6 +60,9 @@
       <None Update="HofmaDresuBoomboxPlaylistSongs\Lethal Company Blues.mp3">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="HofmaDresuBoomboxPlaylistSongs\Scrap Hunt Blues.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
       <None Update="icon.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>

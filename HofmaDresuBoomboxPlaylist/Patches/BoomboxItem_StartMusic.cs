@@ -20,6 +20,9 @@ namespace HofmaDresuBoomboxPlaylist.Patches
                     case "Lethal Company Blues.mp3":
                         __instance.boomboxAudio.volume = 0.4f;
                         break;
+                    case "Scrap Hunt Blues.mp3":
+                        __instance.boomboxAudio.volume = 0.4f;
+                        break;
                 }
                 HofmaDresuBoomboxPlaylist.LogInfo($"Playing {__instance.boomboxAudio.clip.name} at volume {__instance.boomboxAudio.volume}");
             }

@@ -54,7 +54,7 @@ namespace HofmaDresuBoomboxPlaylist.Managers
             }
         }
 
-        static readonly string[] allowedSongs = ["Bitter Regret.mp3", "Lethal Company Blues.mp3"];
+        static readonly string[] allowedSongs = ["Bitter Regret.mp3", "Lethal Company Blues.mp3", "Scrap Hunt Blues.mp3"];
 
         private static IEnumerator LoadAudioClip(string filePath)
         {
